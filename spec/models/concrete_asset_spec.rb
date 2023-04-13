@@ -90,7 +90,7 @@ RSpec.describe Asset, :type => :model do
 
   describe "#name" do
     it 'returns the correct default name for an asset' do
-      buslike_asset.update_attributes(asset_tag: "TEST") # Need a defined asset_tag for this test
+      buslike_asset.update(asset_tag: "TEST") # Need a defined asset_tag for this test
       expect(buslike_asset.name).to eql("Bus Std 40 FT - TEST")
     end
   end
